@@ -45,8 +45,8 @@ void loop() {
 }
 
 void showPatternStep() {
-  for (uint8_t i = 9; i <= 13; i++)
-    digitalWrite(i, LOW);
+  for (uint8_t pin : p)
+    digitalWrite(pin, LOW);
 
   for (uint8_t i = 0; i < sizeof(patterns[pattern][patternIndex]); i++)
     digitalWrite(patterns[pattern][patternIndex][i], HIGH);
